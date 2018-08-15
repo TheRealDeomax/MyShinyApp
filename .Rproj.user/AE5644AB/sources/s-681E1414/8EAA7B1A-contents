@@ -1,0 +1,42 @@
+---
+title: Slideshow Fun
+author: Prajuk Nusbaum
+output:
+  ioslides_presentation:
+    logo: Chancellor300x.bmp
+    widescreen: yes
+    self_contained: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+
+## Fruit
+
+- Apples
+- Bananas
+- Kiwis
+
+<div class='notes'>
+- This is a note to the speaker
+- The audience won't see it.
+</div>
+
+
+## Graph Slide
+
+```{r load-data}
+library(ggplot2)
+data(diamonds)
+```
+
+```{r hist, message=FALSE,fig.align='center'}
+ggplot(diamonds, aes(x=price)) + geom_histogram()
+```
+
+<div class = 'notes'>
+- This is a histogram
+</div>
+     

@@ -1,0 +1,24 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1533579618587.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "8EAA7B1A",
+    "lastKnownWriteTime" : 1534281469,
+    "last_content_update" : 1534281469879,
+    "path" : "~/MyShinyNewApp/markdown/Slides.rmd",
+    "project_path" : "markdown/Slides.rmd",
+    "properties" : {
+        "cursorPosition" : "0,0",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1",
+        "working_dir" : "current"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

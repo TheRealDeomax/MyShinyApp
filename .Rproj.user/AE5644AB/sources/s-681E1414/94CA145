@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1532726068751.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "94CA145",
+    "lastKnownWriteTime" : 1533062213,
+    "last_content_update" : 1533062213766,
+    "path" : "~/MyShinyNewApp/markdown/mymarkdown.rmd",
+    "project_path" : "markdown/mymarkdown.rmd",
+    "properties" : {
+        "cursorPosition" : "131,18",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
