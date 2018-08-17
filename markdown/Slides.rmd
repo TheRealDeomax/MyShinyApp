@@ -6,6 +6,7 @@ output:
     logo: Chancellor300x.bmp
     widescreen: yes
     self_contained: yes
+runtime: shiny
 ---
 
 ```{r setup, include=FALSE}
@@ -13,7 +14,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ```
 
-## Fruit
+## Fruits
 
 - Apples
 - Bananas
@@ -33,7 +34,16 @@ data(diamonds)
 ```
 
 ```{r hist, message=FALSE,fig.align='center'}
-ggplot(diamonds, aes(x=price)) + geom_histogram()
+possible <- names(diamonds)[sapply(diamonds, is.numeric)]
+
+selectInput(inputId = 'SelCol', 
+            label = 'Choose a column',
+            choices = possible
+)
+
+renderPlot(
+  ggplot(diamonds, aes_string(x=input$SelCol)) + geom_histogram()
+)
 ```
 
 <div class = 'notes'>

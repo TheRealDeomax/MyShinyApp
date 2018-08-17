@@ -1,0 +1,58 @@
+---
+title: Flex Example
+output:
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    self_contained: true
+    social: ["twitter","facebook","google"]
+    logo: Chancellor50x.bmp
+    favicon: icon-blue.png
+    source_code: embed
+---
+
+```{r load-packages}
+library(magrittr)
+library(leaflet)
+library(crosstalk)
+
+```
+
+```{r locations}
+
+root <- rprojroot::find_rstudio_root_file()
+
+```
+
+```{r read-map-data}
+pizza <- jsonlite::fromJSON(file.path(root,'FavoriteSpots.json')) %>% tidyr::unnest()
+
+pizzaShare <- SharedData$new(pizza)
+
+```
+# Map
+
+##
+
+### Data
+```{r pizza-table}
+DT::datatable(
+    pizzaShare$data(),
+    rownames = FALSE, 
+    options = list(scrollX=TRUE)
+)
+```
+
+##
+
+### Map
+```{r pizza-map}
+leaflet(pizzaShare) %>%
+  addTiles() %>%
+  addMarkers(
+    lng = ~longitude,
+    lat = ~latitude,
+    popup = ~Name
+  )
+
+```
